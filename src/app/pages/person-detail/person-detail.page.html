@@ -23,12 +23,12 @@
   <div class="clearfix"></div>
 
   <div class="biography" *ngIf="person?.biography">
-    <h1><ion-icon name="contact"></ion-icon> Biografía</h1>
+    <h1><ion-icon name="contact"></ion-icon> Biography</h1>
     <div>{{ person?.biography }}</div>
   </div>
 
   <div class="movies" *ngIf="person?.credits?.cast && person?.credits?.cast.length > 0">
-    <h1><ion-icon name="ios-film"></ion-icon> Filmografía</h1>
+    <h1><ion-icon name="ios-film"></ion-icon> Filmography</h1>
     <ion-virtual-scroll [items]="person?.credits?.cast">
       <div class="movie" *virtualItem="let item" (click)="onMovieDetail(item.id)">
         <ion-icon class="arrow" name="arrow-forward"></ion-icon>
